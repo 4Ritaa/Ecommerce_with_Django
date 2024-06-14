@@ -6,18 +6,21 @@
     <title>Customers</title>
 </head>
 <body>
-   
+   <h3>Customers List</h3>
    <ul>
     {% for customer in customers %}
         <li>
-           <a href ="{% url'customer_detail' customer.pk%}">
+            <a href ="{% url 'plp_ecommerce:customer_detail' customer.pk %}">
             {{customer.first_name}} {{customer.last_name }}{{customer.email}}
             </a>
            
         </li>
     {% endfor %}
     </ul>
-   {{%comment%}} <a href ="{% url'customer_detail'%}" class="back-link">Back to Customer Detail</a>{{%end comment%}}
+    {% comment %}
+    <a href="{% url 'customer_detail' %}" class="back-link">Back to Customer Detail</a>
+    {% endcomment %}
+    
  
 </body>
 </html>
