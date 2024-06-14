@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="customer-details">
+            <h3>{{customer.first_name}} {{customer.last_name }}</h3>
+            <p><strong>Phone:</strong>{{customer.phone}}</p>
+            <p><strong>Address:</strong>{{customer.address}}</p>
+            <p><strong>Email:</strong>{{customer.email}}</p>
+            <p><strong>Joined on:</strong>{{customer.created_at}}</p>
+
+        </div>
+       {{%comment%}} <a href ="{% url'customer_list'%}" class="back-link">Back to Customer List</a>{{%end comment%}}
+
+
+    </div>
+</body>
+</html>
